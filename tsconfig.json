@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist/",
+      "noImplicitAny": true, // ругается где нет типа
+      "module": "ESNext", // система сборки файлов, на бэке можно CommonJS
+      "target": "es5", // в какой js компилировать
+      "jsx": "react-jsx",
+      "allowJs": true, // обрабатывать не только ts файлы, но и js
+      "moduleResolution": "node",
+      "esModuleInterop": true, // позволяет использовать import и export вместо require
+      "allowSyntheticDefaultImports": true // позволяет обычным способом без * импортировать пакеты node js, которые не понимаю default export
+    },
+    "ts-node": {
+      // для работы import
+      "compilerOptions": {
+        "module": "CommonJS"
+      }
+    }
+}
