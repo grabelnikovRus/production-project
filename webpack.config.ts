@@ -13,7 +13,8 @@ export default (env: BuildEnv) => {
         paths: {
             entry: path.resolve(__dirname, "src", "index.tsx"),
             output: path.resolve(__dirname, "build"),
-            html: path.resolve(__dirname, "public", "html.html")
+            html: path.resolve(__dirname, "public", "html.html"),
+            src: path.resolve(__dirname, "src"),
         },
         port
     })
