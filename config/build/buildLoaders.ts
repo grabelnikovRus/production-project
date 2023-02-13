@@ -1,12 +1,21 @@
 import webpack from "webpack";
 import MiniCssExtractPlugin from "mini-css-extract-plugin"
+import ReactRefreshTypeScript from "react-refresh-typescript"
 import { BuildMode } from "./types/config";
 
-export function buildLoaders(mode: BuildMode): webpack.RuleSetRule[] {
+export function buildLoaders(mode: BuildMode, isDev: boolean): webpack.RuleSetRule[] {
     const tsLoader = {
         test: /\.tsx?$/,
-        use: "ts-loader",
-        exclude: /node_modules/
+        exclude: /node_modules/,
+        use: {
+            loader: "ts-loader",
+            options: {
+                getCustomTransformers: () => ({
+                  before: [isDev && ReactRefreshTypeScript()].filter(Boolean),
+                }),
+                transpileOnly: isDev,
+            },
+        },
     } // если не используем тайпскрипт, то пришлось бы добавить babel-loader
 
     const cssLoader = {
