@@ -1,18 +1,25 @@
-import { Link, Routes, Route } from "react-router-dom"
 import { AppRouter } from "./providers/router";
+import { Navbar } from "widgets/navbar";
 import { useTheme } from "./providers/theme-providers";
 import { classNames } from "shared/lib/classNames"
+import { Sidebar } from "widgets/sidebar";
+import { Suspense } from "react";
+
+import "shared/config/i18n/i18n" // импортировать именно так!!!!
 import "./styles/index.scss"
 
 export const App = () => {
-    const { theme, toggleTheme} = useTheme();
+    const { theme } = useTheme();
 
     return (
         <div className={classNames("app", theme)}>
-            <Link to="/">Главаня</Link>
-            <Link to="/about">О нас</Link>
-            <button onClick={toggleTheme}>toggle</button>
-            <AppRouter />
+            <Suspense fallback="">
+                <Navbar />
+                <div className="content">
+                    <Sidebar />
+                    <AppRouter />
+                </div>
+            </Suspense>
         </div>
     )
 }// Внутри Suspense должен быть весь Routes

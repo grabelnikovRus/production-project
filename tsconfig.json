@@ -12,7 +12,8 @@
         "*": ["./src/*"], // абсолютных путей, после надо согласовать это в вебпаке - добавить в resolvers - preferAbsolute: true и modules: [ с путями ]
       },
       "esModuleInterop": true, // позволяет использовать import и export вместо require
-      "allowSyntheticDefaultImports": true // позволяет обычным способом без * импортировать пакеты node js, которые не понимаю default export
+      "allowSyntheticDefaultImports": true, // позволяет обычным способом без * импортировать пакеты node js, которые не понимаю default export
+      "resolveJsonModule": true // позволяет импортировать json
     },
     "ts-node": {
       // для работы import

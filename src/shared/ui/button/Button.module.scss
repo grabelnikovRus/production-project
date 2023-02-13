@@ -1,0 +1,10 @@
+.btn {
+    cursor: pointer;
+
+    &__clear {
+        padding: 0;
+        margin: 0;
+        outline: none;
+        border: none;
+    }
+}
