@@ -13,7 +13,8 @@
       },
       "esModuleInterop": true, // позволяет использовать import и export вместо require
       "allowSyntheticDefaultImports": true, // позволяет обычным способом без * импортировать пакеты node js, которые не понимаю default export
-      "resolveJsonModule": true // позволяет импортировать json
+      "resolveJsonModule": true, // позволяет импортировать json
+      "strictNullChecks": true
     },
     "ts-node": {
       // для работы import
