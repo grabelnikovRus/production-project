@@ -1,24 +1,23 @@
-import { type } from 'os';
-import { ButtonHTMLAttributes, FC } from 'react';
-import { classNames } from 'shared/lib/classNames';
+import { type ButtonHTMLAttributes, type FC } from 'react'
+import { classNames } from 'shared/lib/classNames'
 
 import s from './Button.module.scss'
 
-type ButtonTheme = "clear"
+type ButtonTheme = 'clear'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    theme?: ButtonTheme
+  theme?: ButtonTheme
 }
 
-export const Button: FC<ButtonProps> = ({ className, onClick, children, theme = "clear", ...other }) => {
-
-    return (
-        <button 
+export const Button: FC<ButtonProps> = ({ className, onClick, children, theme = 'clear', type = 'button', ...other }) => {
+  return (
+        <button
           className={classNames(s.btn, className, s[`btn__${theme}`])}
           onClick={onClick}
+          type={type}
           {...other}
         >
             {children}
         </button>
-    )
+  )
 }

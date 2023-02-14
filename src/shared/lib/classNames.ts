@@ -1,8 +1,8 @@
-type Mods = Record<string, string | boolean>
+type Mods = Record<string, boolean>
 
-export const classNames = (...arg: Array<string | Mods>) => 
-    arg.filter(Boolean).map(
-        (el) => typeof el === "string" 
-            ? el 
-            : Object.entries(el).map(([key, val]) => val ? key : false).join("")
-    ).join(" ");
+export const classNames = (...arg: Array<string | undefined | Mods>): string =>
+  arg.map(
+    (el) => typeof el === 'string'
+      ? el
+      : Object.entries(el !== undefined ? el : {}).map(([key, val]) => val ? key : '').join('')
+  ).join(' ')

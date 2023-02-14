@@ -1,10 +1,11 @@
-import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next'
+import { type FC } from 'react'
 
-export const Main = () => {
-    const { t, i18n } = useTranslation("main")
-    return (
+export const Main: FC = () => {
+  const { t } = useTranslation('main')
+  return (
         <div>
-            {t("main")}
+            {t('main')}
         </div>
-    )
-};
+  )
+}
