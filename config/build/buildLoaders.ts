@@ -50,10 +50,24 @@ export function buildLoaders (mode: BuildMode, isDev: boolean): webpack.RuleSetR
     ]
   }
 
+  const babelLoader = {
+    test: /\.(js|jsx|tsx)$/,
+    exclude: /node_modules/,
+    use: {
+        loader: 'babel-loader',
+        options: {
+            presets: ['@babel/preset-env'],
+            plugins: [
+            ],
+        },
+    },
+  };
+
   return [
     tsLoader,
     cssLoader,
     svgLoader,
-    fileLoader
+    fileLoader,
+    babelLoader
   ]
 }
