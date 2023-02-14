@@ -54,14 +54,14 @@ export function buildLoaders (mode: BuildMode, isDev: boolean): webpack.RuleSetR
     test: /\.(js|jsx|tsx)$/,
     exclude: /node_modules/,
     use: {
-        loader: 'babel-loader',
-        options: {
-            presets: ['@babel/preset-env'],
-            plugins: [
-            ],
-        },
-    },
-  };
+      loader: 'babel-loader',
+      options: {
+        presets: ['@babel/preset-env'],
+        plugins: [
+        ]
+      }
+    }
+  }
 
   return [
     tsLoader,

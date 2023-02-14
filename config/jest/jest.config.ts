@@ -16,24 +16,24 @@ export default {
   // Automatically clear mock calls, instances, contexts and results before every test
   clearMocks: true,
   coveragePathIgnorePatterns: [ // то что пропускают тесты
-    "\\\\node_modules\\\\"
+    '\\\\node_modules\\\\'
   ],
   moduleDirectories: [ // где искать модули рекурсивно
-    "node_modules"
+    'node_modules'
   ],
-  moduleFileExtensions: [ // возможные расшиирения файлов 
-    "js",
-    "mjs",
-    "cjs",
-    "jsx",
-    "ts",
-    "tsx",
-    "json",
-    "node"
+  moduleFileExtensions: [ // возможные расшиирения файлов
+    'js',
+    'mjs',
+    'cjs',
+    'jsx',
+    'ts',
+    'tsx',
+    'json',
+    'node'
   ],
-  rootDir: "../../", // путь до корнегового каталога
-  testMatch: [  // шаблогы для поиска файлов с тестами
-    "<rootDir>/src/**/*(*.)@(spec|test).[tj]s?(x)"
+  rootDir: '../../', // путь до корнегового каталога
+  testMatch: [ // шаблогы для поиска файлов с тестами
+    '<rootDir>/src/**/*(*.)@(spec|test).[tj]s?(x)'
   ],
 
   // Indicates whether the coverage information should be collected while executing the test
@@ -139,7 +139,7 @@ export default {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  testEnvironment: "jsdom",
+  testEnvironment: 'jsdom'
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -181,4 +181,4 @@ export default {
 
   // Whether to use watchman for file crawling
   // watchman: true,
-};
+}

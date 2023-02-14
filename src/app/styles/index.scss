@@ -1,6 +1,6 @@
-@import "reset";
-@import "variables/global";
-@import "themes/light";
+@import url("./reset.scss");
+@import url("./variables/global.scss");
+@import url("./themes/light.scss");
 @import url("./themes/dark.scss");
 
 .app {
