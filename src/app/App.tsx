@@ -1,5 +1,5 @@
 import { AppRouter } from './providers/router'
-import { Suspense, type FC } from 'react'
+import { Suspense, useEffect, type FC } from 'react'
 import { Navbar } from 'widgets/navbar'
 import { useTheme } from './providers/theme-providers'
 import { classNames } from 'shared/lib/classNames'
@@ -12,6 +12,13 @@ import './styles/index.scss'
 
 export const App: FC = () => {
   const { theme } = useTheme()
+
+  useEffect(() => {
+    if (Math.random() >= 0.54) {
+      console.log(1)
+      throw new Error()
+    }
+  }, [])
 
   return (
     <div className={classNames('app', theme)}>
