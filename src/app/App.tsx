@@ -4,7 +4,7 @@ import { Navbar } from 'widgets/navbar'
 import { useTheme } from './providers/theme-providers'
 import { classNames } from 'shared/lib/classNames'
 import { Sidebar } from 'widgets/sidebar'
-import { PageLoader } from "widgets/page-loader"
+import { PageLoader } from 'widgets/page-loader'
 
 import 'shared/config/i18n/i18n' // импортировать именно так!!!!
 
