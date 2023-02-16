@@ -7,6 +7,7 @@ import { type BuildEnv } from './config/build/types/config'
 export default (env: BuildEnv): Configuration => {
   const mode = env.mode ?? 'development'
   const port = env.port ?? 3001
+  const analyze = env.analyze ?? false
 
   return buildWebpackConfig({
     mode,
@@ -16,7 +17,8 @@ export default (env: BuildEnv): Configuration => {
       html: path.resolve(__dirname, 'public', 'html.html'),
       src: path.resolve(__dirname, 'src')
     },
-    port
+    port,
+    analyze
   })
 }
 

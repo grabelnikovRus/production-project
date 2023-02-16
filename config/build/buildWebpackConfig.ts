@@ -7,7 +7,7 @@ import { buildresolve } from './buildResolve'
 import { buildDevServer } from './buildDevServer'
 
 export function buildWebpackConfig (options: BuildOptions): Configuration {
-  const { mode, paths } = options
+  const { mode, paths, analyze } = options
 
   const isDev = mode === 'development'
 
@@ -19,7 +19,7 @@ export function buildWebpackConfig (options: BuildOptions): Configuration {
       path: paths.output,
       clean: true
     },
-    plugins: buildPlugins(paths, isDev),
+    plugins: buildPlugins(paths, isDev, analyze),
     module: {
       rules: buildLoaders(mode, isDev)
     },
