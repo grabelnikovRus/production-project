@@ -12,10 +12,12 @@ export const Sidebar: FC = () => {
   const onToggle = (): void => { setCollapsed(prev => !prev) }
 
   return (
-        <div className={classNames(s.block, {
+        <div
+        data-testid="sidebar"
+        className={classNames(s.block, {
           [s.block__collapsed]: collapsed
         })}>
-            <Button onClick={onToggle}>toggle</Button>
+            <Button onClick={onToggle} data-testid="sidebar__toggle">toggle</Button>
             <div className={s.block__switchers}>
               <ThemeSwitcher />
               <LangSwitcher />

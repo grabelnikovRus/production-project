@@ -1,0 +1,23 @@
+для использования установить "@testing-library/react" и '@testing-library/jest-dom'
+
+создать файл jest-setup.js и импортировать туда import '@testing-library/jest-dom'
+в jest.config.js добавить setupFilesAfterEnv: ['<rootDir>/jest-setup.js']
+в tsconfig.json добавить
+  "include": [
+    ...
+    "./jest-setup.ts"
+  ],
+
+так же надо настроить бабел и добавить @babel/preset-react в бабел конфиг
+
+jest не может читать файлы scss поэтому надо добавить настройки в jest.config
+  moduleNameMapper: {
+    '\\.svg$': path.resolve(__dirname, 'JestEmptyComp.tsx'), свг будут вызывать ошибку, для них делаем мок - пустой компонент, обязательно экспорт по дефолту
+    '\\.s?css$': 'identity-obj-proxy',
+  },
+  и установить npm install --save-dev identity-obj-proxy
+
+чтобы добавить глобально React в jest в бабел конфиг добавить:
+ ["@babel/preset-react", {
+      "runtime": "automatic"
+ }]
