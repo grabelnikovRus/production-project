@@ -22,13 +22,13 @@
         "module": "CommonJS"
       }
     },
-    "include": [ // для настройки и работы jest dom
-      "./config/jest/jest-setup.ts",
+    "include": [ 
+      "./config/jest/jest-setup.ts", // для настройки и работы jest dom
       ".eslintrc.json",
       "./config/jest/jest.config.ts",
-      "**/*.ts",
-      "**/*.tsx",// регает проблему импорта реакта в test.tsx
-      "**/**/*.ts",
-      "**/**/*.tsx"
+      "*.ts",
+      "./config/**/*.ts",
+      "./src/**/*.ts",
+      "./src/**/*.tsx"// решает проблему импорта реакта
     ],
 }

@@ -3,7 +3,7 @@ import { classNames } from 'shared/lib/classNames'
 
 import s from './Button.module.scss'
 
-type ButtonTheme = 'clear'
+type ButtonTheme = 'clear' | 'outline'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   theme?: ButtonTheme

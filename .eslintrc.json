@@ -26,6 +26,7 @@
         "react-hooks/exhaustive-deps": "error",
         "react/react-in-jsx-scope": "off",
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
-        "no-unused-vars": ["error", { "args": "all" }] //неиспользуемые переменных в FC
+        "no-unused-vars": ["error", { "args": "all" }], //неиспользуемые переменных в FC
+        "@typescript-eslint/consistent-type-assertions": "off"
     }
 }

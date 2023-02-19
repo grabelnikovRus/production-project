@@ -7,4 +7,12 @@
     border: none;
     outline: none;
   }
+
+  &__outline {
+    padding: 10px 16px;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    border-radius: 4px;
+    background: none;
+  }
 }
