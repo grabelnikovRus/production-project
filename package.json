@@ -12,7 +12,9 @@
     "eslint:fix": "eslint **/*.{ts,tsx} --fix",
     "stylelint": "npx stylelint **/*.scss",
     "stylelint:fix": "npx stylelint **/*.scss --fix",
-    "unit": "jest --config ./config/jest/jest.config.ts",
+    "test:unit": "jest --config ./config/jest/jest.config.ts",
+    "test:ui": "loki test",
+    "test:ui:ok": "loki test approve",
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
     "build-storybook": "build-storybook -c ./config/storybook"
   },
@@ -89,9 +91,25 @@
     "i18next": "^21.0.0",
     "i18next-browser-languagedetector": "^7.0.1",
     "i18next-http-backend": "^2.1.1",
+    "loki": "^0.31.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-i18next": "^11.18.0",
     "react-router-dom": "^6.8.0"
+  },
+  "loki": {
+    "configurations": {
+      "chrome.laptop": {
+        "target": "chrome.app",
+        "width": 1366,
+        "height": 768,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "chrome.iphone7": {
+        "target": "chrome.app",
+        "preset": "iPhone 7"
+      }
+    }
   }
 }

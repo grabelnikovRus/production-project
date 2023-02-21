@@ -1,0 +1,9 @@
+loki используется для скриншотного тестирования
+
+устанавливаем локи yarn add loki --dev именно dev
+
+после выполняем yarn loki init, может выйти ошибка Storybook config path not found at ".storybook", try passing a --config argument,
+надо указать путь до сторибука npx loki init --config ./config/storybook
+в package появятся настройки для локи, должно быть указано расширение "target": "chrome.app"
+
+для работы с локи надо запустить сторибук, а потом npx loki test
