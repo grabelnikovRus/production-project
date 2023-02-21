@@ -64,10 +64,10 @@ export function buildLoaders (mode: BuildMode, isDev: boolean): webpack.RuleSetR
   }
 
   return [
+    babelLoader,
     tsLoader,
     cssLoader,
     svgLoader,
-    fileLoader,
-    babelLoader
+    fileLoader
   ]
 }

@@ -24,8 +24,9 @@
     },
     "include": [ 
       "./config/jest/jest-setup.ts", // для настройки и работы jest dom
-      ".eslintrc.json",
-      "./config/jest/jest.config.ts",
+      "./.eslintrc.json",
+      "./config/**/*.ts",
+      "./config/**/*.tsx",
       "*.ts",
       "./config/**/*.ts",
       "./src/**/*.ts",

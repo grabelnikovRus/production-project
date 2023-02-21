@@ -20,7 +20,7 @@ export function buildPlugins (paths: BuildOptions['paths'], isDev: boolean, anal
       _IS_DEV_: isDev
     }),
     new BundleAnalyzerPlugin({
-      analyzerMode: analyze ? "server" : "disabled"
+      analyzerMode: analyze ? 'server' : 'disabled'
     }),
     (isDev && new ReactRefreshWebpackPlugin()) as ReactRefreshWebpackPlugin
   ].filter(Boolean)
