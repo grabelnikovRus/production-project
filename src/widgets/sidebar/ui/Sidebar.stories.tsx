@@ -4,7 +4,7 @@ import { themeDecor } from 'shared/config/storybook/decorators'
 import { Sidebar } from './Sidebar'
 
 export default {
-  title: 'widgets/ButSidebarton',
+  title: 'widgets/Sidebar',
   component: Sidebar
 } as ComponentMeta<typeof Sidebar>
 

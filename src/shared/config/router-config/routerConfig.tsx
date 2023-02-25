@@ -3,7 +3,7 @@ import { Main } from 'page/Main'
 import { AboutAsync } from 'page/About.async'
 import { NotFound } from 'page/not-found'
 
-const routerNames = {
+export const routerNames = {
   MAIN: 'MAIN',
   ABOUT: 'ABOUT',
   NOT_FOUND: 'NOT_FOUND'

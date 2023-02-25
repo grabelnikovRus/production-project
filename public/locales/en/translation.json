@@ -1,6 +1,9 @@
 {
     "translate": "Translate",
+    "short_translate": "En",
     "not found page": "Not Found Page",
     "error": "An error has occurred",
-    "try": "Try again"
+    "try": "Try again",
+    "main": "Main",
+    "about": "About Us"
 }

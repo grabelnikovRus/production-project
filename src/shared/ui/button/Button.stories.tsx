@@ -22,3 +22,17 @@ Secondary.args = {
   theme: 'outline',
   children: 'text'
 }
+
+export const sizeL = Template.bind({})
+sizeL.args = {
+  theme: 'background',
+  children: 'text',
+  size: 'l'
+}
+
+export const sizeXL = Template.bind({})
+sizeXL.args = {
+  theme: 'background_inverted',
+  children: 'text',
+  size: 'xl'
+}

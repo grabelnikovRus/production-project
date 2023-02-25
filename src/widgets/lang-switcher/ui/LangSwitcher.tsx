@@ -2,7 +2,11 @@ import { type FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Button } from 'shared/ui'
 
-export const LangSwitcher: FC = () => {
+interface LangSwitcherProps {
+  short?: boolean
+}
+
+export const LangSwitcher: FC<LangSwitcherProps> = ({ short = false }) => {
   const { t, i18n } = useTranslation()
 
   const onClick = (): void => {
@@ -10,6 +14,6 @@ export const LangSwitcher: FC = () => {
   }
 
   return (
-    <Button theme="clear" onClick={onClick}>{t('translate')}</Button>
+    <Button theme="clear" onClick={onClick}>{t(short ? 'short_translate' : 'translate')}</Button>
   )
 }

@@ -5,8 +5,12 @@
   background-color: var(--inverted-bg-color);
   transition: width 0.2s;
 
-  &__collapsed {
-    width: 80px;
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 20px;
+    row-gap: 15px;
   }
 
   &__switchers {
@@ -15,5 +19,43 @@
     display: flex;
     justify-content: center;
     width: 100%;
+    column-gap: 15px;
+  }
+
+  &__item a {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  &__text {
+    max-height: var(--font-line-l);
+    overflow: hidden;
+    opacity: 1;
+    transition: opacity 0.1s;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    fill: var(--inverted-color-secondary)
+  }
+
+  &__collapsed {
+    width: 80px;
+
+    &_btn {
+      position: absolute;
+      right: -50px;
+      bottom: 40px;
+      font-size: 20px;
+    }
+
+    .block__switchers {
+      flex-direction: column;
+    }
+
+    .block__text {
+      opacity: 0;
+    }
   }
 }

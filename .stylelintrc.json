@@ -5,6 +5,7 @@
     ],
     "plugins": ["stylelint-order", "stylelint-scss"],
     "rules": {
-        "indentation": [2]
+        "indentation": [2],
+        "selector-class-pattern": null
     }
 }
