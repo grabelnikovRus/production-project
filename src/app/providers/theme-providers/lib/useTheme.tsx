@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { Theme, ThemeContext, THEME_KEY } from './ThemeContext'
 
 interface UseThemeReturn {
@@ -14,6 +14,11 @@ export const useTheme = (): UseThemeReturn => {
     setTheme(newTheme)
     localStorage.setItem(THEME_KEY, newTheme)
   }
+
+  useEffect(() => {
+    document.body.classList.add('app', theme)
+    return () => { document.body.classList.remove('app', theme) }
+  }, [theme])
 
   return {
     theme,

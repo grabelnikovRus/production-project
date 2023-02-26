@@ -3,11 +3,14 @@
 @import url("./themes/light.scss");
 @import url("./themes/dark.scss");
 
-.app {
-  min-height: 100vh;
+body {
   color: var(--color-primary);
   font: var(--font-l);
   background: var(--bg-color);
+}
+
+.app {
+  min-height: 100vh;
 }
 
 .content {
