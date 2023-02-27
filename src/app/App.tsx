@@ -17,12 +17,14 @@ export const App: FC = () => {
   }, [])
 
   return (
-    <Suspense fallback={<PageLoader />}>
-      <Navbar />
-      <div className="content">
-        <Sidebar />
-        <AppRouter />
-      </div>
-    </Suspense>
+    <div className='app'>
+      <Suspense fallback={<PageLoader />}>
+        <Navbar />
+        <div className="content">
+          <Sidebar />
+          <AppRouter />
+        </div>
+      </Suspense>
+    </div>
   )
 }// Внутри Suspense должен быть весь Routes

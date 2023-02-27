@@ -16,8 +16,8 @@ export const useTheme = (): UseThemeReturn => {
   }
 
   useEffect(() => {
-    document.body.classList.add('app', theme)
-    return () => { document.body.classList.remove('app', theme) }
+    document.body.classList.add(theme)
+    return () => { document.body.classList.remove(theme) }
   }, [theme])
 
   return {
